@@ -1,0 +1,10 @@
+*{
+    background-color: rgba(255, 255, 255, 0.91);
+    text-shadow: red;
+}
+.btn{
+    color: rgba(255, 0, 0, 0.433);
+}
+.btn:hover{
+    COLOR:rgb(149, 147, 147);
+}
