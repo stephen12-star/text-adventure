@@ -1,10 +1,39 @@
 *{
-    background-color: rgba(255, 255, 255, 0.91);
+    background-color: #11ffee00;  /* Fully transparent */
     text-shadow: red;
+    font-size: 30px;
 }
-.btn{
-    color: rgba(255, 0, 0, 0.433);
+.btn-1{
+    color: rgba(0, 0, 0, 0.937);
+    background: rgba(255, 0, 0, 0.497);
+}
+.btn-2{
+    color: rgba(0, 0, 0, 0.953);
+    background: rgba(69, 250, 93, 0.497);
+}
+.btn-3{
+    color: rgba(0, 0, 0, 0.963);
+    background: rgba(61, 123, 247, 0.764);
 }
 .btn:hover{
     COLOR:rgb(149, 147, 147);
 }
+img{
+    height: 10in;
+    width: 10in;
+}
+
+.image-text {
+    position: relative;
+  text-align: center;
+  color: rgb(255, 255, 255);
+ 
+  }
+
+  .all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
