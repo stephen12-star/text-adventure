@@ -1,11 +1,14 @@
 *{
-    background-color: #11ffee00;  /* Fully transparent */
+    background-color: #ffffff00;  /* Fully transparent */
     text-shadow: red;
-    font-size: 30px;
+    font-size: 35px;
+}
+BODY{
+    background-color: rgba(0, 0, 0, 0.996);
 }
 .btn-1{
-    color: rgba(0, 0, 0, 0.937);
-    background: rgba(255, 0, 0, 0.497);
+    color: rgb(0, 0, 0);
+    background: rgba(255, 55, 0, 0.688);
 }
 .btn-2{
     color: rgba(0, 0, 0, 0.953);
@@ -15,8 +18,10 @@
     color: rgba(0, 0, 0, 0.963);
     background: rgba(61, 123, 247, 0.764);
 }
-.btn:hover{
-    COLOR:rgb(149, 147, 147);
+.btn-1:hover,
+.btn-2:hover,
+.btn-3:hover{
+    COLOR:rgb(247, 238, 238);
 }
 img{
     height: 10in;
@@ -27,6 +32,7 @@ img{
     position: relative;
   text-align: center;
   color: rgb(255, 255, 255);
+  
  
   }
 
@@ -36,4 +42,11 @@ img{
     left: 50%;
     transform: translate(-50%, -50%);
 
+  }
+
+  .btn-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
   }
