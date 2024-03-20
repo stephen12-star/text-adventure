@@ -8,6 +8,15 @@ function startGame() {
   showTextNode(1)
 }
 
+
+function changeImage(fileName){
+
+  let img= document.querySelector('#iwe');
+  img.setAttribute("src", fileName);
+
+}
+
+
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
@@ -46,33 +55,29 @@ const textNodes = [
     options: [
       {
         text: 'Ask around',
-        setState: { blueGoo: true },
+        //setState: {'blueGoo' }, use if items needed
         nextText: 2
       },
       {
-        text: 'Wander around',
-        nextText: 2
+        text: 'Venture out',
+        nextText: 3
+       
       },
-      {
-        text:`Do nothing`,
-        
-      }
     ]
   },
   {
     id: 2,
-    text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+
+    text: 'After going near the main attractions of the city, an uncanny tour guide offered us a Guide.',
     options: [
       {
-        text: 'Trade the goo for a sword',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
-        nextText: 3
+        text: 'Accept his offer',   
+       // requiredState: (currentState) => currentState.blueGoo,
+        //setState: { blueGoo: false, sword: true },  TRADE ITEMS
+        nextText: 4
       },
       {
-        text: 'Trade the goo for a shield',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
+        text: 'Decline and quickly leave',
         nextText: 3
       },
       {
@@ -83,7 +88,7 @@ const textNodes = [
   },
   {
     id: 3,
-    text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+    text: 'After they spent time 5 hours adventuring, Henry is nowhere to be found.',
     options: [
       {
         text: 'Explore the castle',
@@ -101,7 +106,7 @@ const textNodes = [
   },
   {
     id: 4,
-    text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+    text: 'After leading us through',
     options: [
       {
         text: 'Restart',
