@@ -1,5 +1,6 @@
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-buttons')
+const image = document.getElementById('illustration');
 
 let state = {}
 
@@ -8,13 +9,6 @@ function startGame() {
   showTextNode(1)
 }
 
-
-function changeImage(fileName){
-
-  let img= document.querySelector('#iwe');
-  img.setAttribute("src", fileName);
-
-}
 
 
 function showTextNode(textNodeIndex) {
@@ -35,6 +29,13 @@ function showTextNode(textNodeIndex) {
   })
 }
 
+
+function showImage(textNodeIndex) {
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+  image.style.backgroundImage="url(" + textNode.img + ")"; 
+}
+
+
 function showOption(option) {
   return option.requiredState == null || option.requiredState(state)
 }
@@ -45,12 +46,15 @@ function selectOption(option) {
     return startGame()
   }
   state = Object.assign(state, option.setState)
+  console.log('állapot: ' + JSON.stringify(state));
   showTextNode(nextTextNodeId)
+  showImage(nextTextNodeId);
 }
 
 const textNodes = [
   {
     id: 1,
+    img: 'ask.webp',
     text: 'A group of friends visited a town for summer vacation, but something was off about the town',
     options: [
       {
@@ -64,10 +68,11 @@ const textNodes = [
        
       },
     ]
+  
   },
   {
     id: 2,
-
+    img: 'ask.webp',
     text: 'After going near the main attractions of the city, an uncanny tour guide offered us a Guide.',
     options: [
       {
