@@ -1,83 +1,54 @@
-const textElement = document.getElementById('text')
-const optionButtonsElement = document.getElementById('option-buttons')
+const textElement = document.getElementById('text');
 const image = document.getElementById('illustration');
+const optionButtonsElement = document.getElementById('option-buttons');
 
-let state = {}
+let state = {};
 
 function startGame() {
-  state = {}
-  showTextNode(1)
-}
-
-
-
-function showTextNode(textNodeIndex) {
-  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-  textElement.innerText = textNode.text
-  while (optionButtonsElement.firstChild) {
-    optionButtonsElement.removeChild(optionButtonsElement.firstChild)
-  }
-
-  textNode.options.forEach(option => {
-    if (showOption(option)) {
-      const button = document.createElement('button')
-      button.innerText = option.text
-      button.classList.add('btn')
-      button.addEventListener('click', () => selectOption(option))
-      optionButtonsElement.appendChild(button)
-    }
-  })
-}
-
-
-function showImage(textNodeIndex) {
-  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
-  image.style.backgroundImage="url(" + textNode.img + ")"; 
-}
-
-
-function showOption(option) {
-  return option.requiredState == null || option.requiredState(state)
-}
-
-function selectOption(option) {
-  const nextTextNodeId = option.nextText
-  if (nextTextNodeId <= 0) {
-    return startGame()
-  }
-  state = Object.assign(state, option.setState)
-  console.log('állapot: ' + JSON.stringify(state));
-  showTextNode(nextTextNodeId)
-  showImage(nextTextNodeId);
+  state = {};
+  showTextNode(1);
 }
 
 const textNodes = [
   {
     id: 1,
-    img: 'ask.webp',
-    text: 'A group of friends visited a town for summer vacation, but something was off about the town',
+    text: 'As they got closer to their summer get away the bus catches a flat tire.',
     options: [
       {
-        text: 'Ask around',
+        text: 'Detour through town',
         //setState: {'blueGoo' }, use if items needed
         nextText: 2
       },
+
+    ]
+
+  },
+
+  {
+    id: 2,
+    text: 'After regrouping with your friends, Henry asks to wander the town but the others want to talk to locals for directions.',
+    options: [
       {
-        text: 'Venture out',
+        text: 'Agree to wander.',
         nextText: 3
-       
+      },
+
+      {
+        text: 'Get directions.',
+        nextText: 4
       },
     ]
-  
+
+
   },
   {
     id: 2,
-    img: 'ask.webp',
     text: 'After going near the main attractions of the city, an uncanny tour guide offered us a Guide.',
+    imgsrc: "vammm.jpg",
     options: [
       {
-        text: 'Accept his offer',   
-       // requiredState: (currentState) => currentState.blueGoo,
+        text: 'Accept his offer',
+        // requiredState: (currentState) => currentState.blueGoo,
         //setState: { blueGoo: false, sword: true },  TRADE ITEMS
         nextText: 4
       },
@@ -112,6 +83,7 @@ const textNodes = [
   {
     id: 4,
     text: 'After leading us through',
+    imgsrc: "door 1.jpg",
     options: [
       {
         text: 'Restart',
@@ -206,4 +178,52 @@ const textNodes = [
   }
 ]
 
-startGame()
+
+const img = document.getElementById('iwe')
+
+function showTextNode(textNodeIndex) {
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+  textElement.innerText = textNode.text;
+  while (optionButtonsElement.firstChild) {
+    optionButtonsElement.removeChild(optionButtonsElement.firstChild);
+  }
+
+  textNode.options.forEach(option => {
+    if (showOption(option)) {
+      const button = document.createElement('button');
+      button.innerText = option.text;
+      button.classList.add('btn');
+      button.addEventListener('click', () => selectOption(option));
+      optionButtonsElement.appendChild(button);
+    }
+  });
+}
+
+function showImage(textNodeIndex) {
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+  image.style.backgroundImage = "url(" + textNode.img + ")";
+}
+
+function showOption(option) {
+  return option.requiredState == null || option.requiredState(state);
+}
+
+function selectOption(option) {
+  const nextTextNodeId = option.nextText;
+  if (nextTextNodeId <= 0) {
+    return startGame();
+  }
+  state = Object.assign(state, option.setState);
+  console.log('állapot: ' + JSON.stringify(state));
+
+  let i = textNodes[nextTextNodeId - 1].imgsrc
+  if (i) img.src = i
+
+  showTextNode(nextTextNodeId);
+  showImage(nextTextNodeId);
+}
+
+startGame();
+
+
+

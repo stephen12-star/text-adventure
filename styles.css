@@ -1,8 +1,4 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: Gotham Rounded;
-  }
-  
+
   body {
     padding: 0;
     margin: 0;
@@ -37,80 +33,49 @@
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   
   .btn {
-    background-color: hsla(3, 96%, 48%, 0.579);
-    border: 6px solid hsla(3, 96%, 48%, 0.579);
+    background-color: hsla(3, 96%, 48%, 0.344);
+    border: 6px solid hsla(0, 96%, 60%, 0.233);
     border-radius: 15px;
     padding: 5px 10px;
     color: white;
     outline: none;
     font-size: 2.2vh;
+    font-family: "Creepster", system-ui;
+font-weight: 400;
+font-style: normal;
    
   }
   
   .btn:hover {
-    background-color: rgba(0, 234, 255, 0.523);
-    color :rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.523);
+    color :rgba(255, 0, 0, 0.651);
   }
 
-  p {
-    font-size: 2vh;
-  }
-  
-  /**{
-    background-color: #ffffff00;  
-    text-shadow: red;
-    font-size: 35px;
-    **/
-
-BODY{
-    background-color: rgba(0, 0, 0, 0.996);
-}
-.btn-1{
-    color: rgb(0, 0, 0);
-    background: rgba(255, 55, 0, 0.688);
-}
-.btn-2{
-    color: rgba(0, 0, 0, 0.953);
-    background: rgba(69, 250, 93, 0.497);
-}
-.btn-3{
-    color: rgba(0, 0, 0, 0.963);
-    background: rgba(61, 123, 247, 0.764);
-}
-.btn-1:hover,
-.btn-2:hover,
-.btn-3:hover{
-    COLOR:rgb(247, 238, 238);
-}
-img{
-    height: 10in;
-    width: 10in;
-}
-
-.image-text {
-    position: relative;
-  text-align: center;
-  color: rgb(255, 255, 255);
-  
+  .text{
+color: rgba(255, 51, 51, 0.855);
+font-family: "Creepster", system-ui;
+font-weight: 400;
+font-style: normal;
+ }
+ .text:hover{
+  color: rgba(255, 112, 112, 0.638);
+ }
  
-  }
 
-  .all {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+body{
+    background-color: rgba(0, 0, 0, 0.999);
+    background-image:url(vfdf.jpg) ;
+    
+}
 
-  }
+img{
+    height: 7in;
+    width: 7in;
+}
 
-  .btn-grid{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
-  }
-
-  
