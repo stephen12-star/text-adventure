@@ -13,10 +13,10 @@ const textNodes = [
   {
     id: 1,
     text: 'As they got closer to their summer get away the bus catches a flat tire.',
+    imgsrc: "TOWN.jpg",
     options: [
       {
         text: 'Detour through town',
-        //setState: {'blueGoo' }, use if items needed
         nextText: 2
       },
 
@@ -42,40 +42,34 @@ const textNodes = [
 
   },
   {
-    id: 2,
-    text: 'After going near the main attractions of the city, an uncanny tour guide offered us a Guide.',
+    id: 3,
+    text: 'Henry leads the group of this journey, they follow the street through a small shopping center.',
     imgsrc: "vammm.jpg",
     options: [
       {
-        text: 'Accept his offer',
-        // requiredState: (currentState) => currentState.blueGoo,
-        //setState: { blueGoo: false, sword: true },  TRADE ITEMS
-        nextText: 4
-      },
-      {
-        text: 'Decline and quickly leave',
-        nextText: 3
-      },
-      {
-        text: 'Ignore the merchant',
-        nextText: 3
-      }
-    ]
-  },
-  {
-    id: 3,
-    text: 'After they spent time 5 hours adventuring, Henry is nowhere to be found.',
-    options: [
-      {
-        text: 'Explore the castle',
-        nextText: 4
-      },
-      {
-        text: 'Find a room to sleep at in the town',
+        text: 'Go inside',
         nextText: 5
       },
       {
-        text: 'Find some hay in a stable to sleep in',
+        text: 'Go around the store.',
+        nextText: 6
+      },
+    ]
+  },
+  {
+    id: 5,
+    text: 'Once they got inside they each searched the store for any food, maps, or signs of people.',
+    options: [
+      {
+        text: 'Look in the aisles.',
+        nextText: 4
+      },
+      {
+        text: 'Search the produce section.',
+        nextText: 5
+      },
+      {
+        text: 'Guard the door',
         nextText: 6
       }
     ]
@@ -184,6 +178,11 @@ const img = document.getElementById('iwe')
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
   textElement.innerText = textNode.text;
+  
+  let i = textNode.imgsrc
+  console.log(i)
+  if (i) img.src = i
+
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
@@ -215,9 +214,6 @@ function selectOption(option) {
   }
   state = Object.assign(state, option.setState);
   console.log('állapot: ' + JSON.stringify(state));
-
-  let i = textNodes[nextTextNodeId - 1].imgsrc
-  if (i) img.src = i
 
   showTextNode(nextTextNodeId);
   showImage(nextTextNodeId);

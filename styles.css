@@ -45,11 +45,10 @@
     padding: 5px 10px;
     color: white;
     outline: none;
-    font-size: 2.2vh;
-    font-family: "Creepster", system-ui;
-font-weight: 400;
-font-style: normal;
-   
+    font-size: 20px;
+    font-family: "Fira Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
   }
   
   .btn:hover {
@@ -58,24 +57,85 @@ font-style: normal;
   }
 
   .text{
-color: rgba(255, 51, 51, 0.855);
-font-family: "Creepster", system-ui;
-font-weight: 400;
-font-style: normal;
+color: rgba(255, 2, 2, 0.855);
+font-size:25px;
  }
  .text:hover{
-  color: rgba(255, 112, 112, 0.638);
+  color: rgba(255, 255, 255, 0.764);
  }
  
 
 body{
     background-color: rgba(0, 0, 0, 0.999);
-    background-image:url(vfdf.jpg) ;
-    
 }
 
 img{
     height: 7in;
     width: 7in;
+}
+
+
+
+
+.game{
+  animation: glitch 1s linear infinite;
+  font-family: "Fira Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.game:before,
+.game:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.game:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.game:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
 }
 
