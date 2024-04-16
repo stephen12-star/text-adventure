@@ -46,7 +46,7 @@
     color: white;
     outline: none;
     font-size: 20px;
-    font-family: "Fira Mono", monospace;
+    font-family: "Lacquer", system-ui;
   font-weight: 500;
   font-style: normal;
   }
@@ -58,7 +58,8 @@
 
   .text{
 color: rgba(255, 2, 2, 0.855);
-font-size:25px;
+font-size:27px;
+font-family: "Lacquer", system-ui;
  }
  .text:hover{
   color: rgba(255, 255, 255, 0.764);
@@ -96,18 +97,9 @@ img{
   }
 }
 
-.game:before,
-.game:after{
-  content: attr(title);
-  position: absolute;
-  left: 0;
-}
 
-.game:before{
-  animation: glitchTop 1s linear infinite;
-  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
+
+
 
 @keyframes glitchTop{
   2%,64%{
@@ -121,11 +113,7 @@ img{
   }
 }
 
-.game:after{
-  animation: glitchBotom 1.5s linear infinite;
-  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
+
 
 @keyframes glitchBotom{
   2%,64%{
