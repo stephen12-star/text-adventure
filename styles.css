@@ -79,7 +79,7 @@ img{
 
 
 .game{
-  animation: glitch 1s linear infinite;
+  animation: glitch 1.5s linear infinite;
   font-family: "Fira Mono", monospace;
   font-weight: 500;
   font-style: normal;

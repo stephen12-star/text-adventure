@@ -296,7 +296,7 @@ const textNodes = [
   {
     id: 83,
     text: 'THE PROCESS OF LOOKING OF HENRY A FOGGY STEAM APPEARS IN FRONT OF YOU AND YOU FIND OUT IT WAS THE FINAL BOSS AHEAD',
-    imgsrc: "skull.jpg",
+    imgsrc: "boss.jpg",
     options: [
       {
         text: 'USE THE MIRROR',
@@ -332,7 +332,7 @@ const textNodes = [
   {
     id: 86,
     text: 'VICTORY',
-
+imgsrc:"victory.jpg",
     options: [
       {
         text: 'Congratulations. Play Again.',
@@ -349,7 +349,7 @@ const textNodes = [
     options: [
       {
         text: 'KILL A FRIEND',
-        nextText: 1000
+        nextText: 86
       },
       {
         text: 'GIVE UP',
