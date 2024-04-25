@@ -10,7 +10,7 @@ function startGame() {
 const textNodes = [
   {
     id: 1,
-    text: 'As they got closer to their summer get away you decide to look out the window.',
+    text: ' "WECOME TO NIGHTMARE RETREAT".  As they got closer to their summer get away you decide to look out the window.',
     imgsrc: "bus1.jpg",
     options: [
       {
@@ -204,7 +204,7 @@ const textNodes = [
     imgsrc: "vammm.jpg",
     options: [
       {
-        text: 'USE THE WOODEN STICK NEXT TO YOU',
+        text: 'USE THE WOODEN STAKE NEXT TO YOU',
         nextText: 82
       },
       {
