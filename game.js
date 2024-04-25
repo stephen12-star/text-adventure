@@ -37,9 +37,8 @@ const textNodes = [
         nextText: 50
       },
     ]
-
-
   },
+  
   {
     id: 3,
     text: 'Henry leads the group of this journey, they follow the street through a small shopping center.',
@@ -332,7 +331,7 @@ const textNodes = [
   {
     id: 86,
     text: 'VICTORY',
-imgsrc:"victory.jpg",
+    imgsrc: "victory.jpg",
     options: [
       {
         text: 'Congratulations. Play Again.',
@@ -453,7 +452,7 @@ imgsrc:"victory.jpg",
 
 
 
-  
+
 
 
 
@@ -507,17 +506,19 @@ imgsrc:"victory.jpg",
   },
   {
     id: 50,
-    text: 'You show off your sword to everyone until you cant find henry',
+    text: 'Henry is frustrated now, and starts throwing a tantrum.',
+    imgsrc:"henry.jpg",
     options: [
       {
-        text: 'Henry is frustrated now, when asking locals for directions Henry decides to yawn.',
+        text: 'Tell Henry to T up',
         nextText: 51
       }
     ]
   },
   {
     id: 51,
-    text: 'The lady asks if he is tired and offers him a drink. When he drinks it he begins to act strange',
+    text: 'an old lady walking towards you guys,she asks if they would want to try her drinks henry is the only one who agrees. When he drinks it he begins to act strange',
+    imgsrc:"oldlady.jpg",
     options: [
       {
         text: 'Ask Henry if he is feeling ok.',
@@ -528,6 +529,7 @@ imgsrc:"victory.jpg",
   {
     id: 52,
     text: 'He says his stomach isnt feeling well, we try to look for a hotel to rest at until henry says hes gonna puke. When we turned back to check on him there was no trace of him',
+    imgsrc:"throwup.jpg",
     options: [
       {
         text: 'Tell everyone Henry isnt there anymore.',
@@ -539,6 +541,7 @@ imgsrc:"victory.jpg",
   {
     id: 53,
     text: 'Everyone begins to panic, we retrace our steps but there is no sign of Henry. Sam says to split up but Chris disagrees.',
+    imgsrc: "panic.jpg",
     options: [
       {
         text: ' Agree to split',
@@ -558,8 +561,8 @@ imgsrc:"victory.jpg",
     text: 'You guys followed a path from a map and got led to many monsters',
     options: [
       {
-        text:'Prepare for a fight.',
-        nextText: 17
+        text: 'Prepare for a fight.',
+        nextText: 800
       }
     ]
   },
@@ -569,13 +572,13 @@ imgsrc:"victory.jpg",
 
 
   {
-    id: 17,
+    id: 800,
     text: 'You encounter an Arachne, in order to defeat it you have to think of the best way.',
     imgsrc: "spider.jpg",
     options: [
       {
         text: 'USE THE SWORD YOU FOUND',
-        nextText: 18
+        nextText: 4000
       },
       {
         text: 'RUN AWAY',
@@ -583,6 +586,46 @@ imgsrc:"victory.jpg",
       }
     ]
   },
+
+
+
+
+
+
+  {
+    id: 4000,
+    text: 'You encounter a vampire, in order to defeat it you have to think of the best way.',
+    imgsrc: "vammm.jpg",
+    options: [
+      {
+        text: 'USE THE WOODEN STICK NEXT TO YOU',
+        nextText: 5000
+      },
+      {
+        text: 'DECIDED TO RUN',
+        nextText: 90
+      }
+    ]
+  },
+
+
+  {
+    id: 5000,
+    text: 'You encounter a shapeshifter, in order to defeat it you have to think of the best way.',
+    imgsrc: "goddess.png",
+    options: [
+      {
+        text: 'COVER YOUR EAR',
+        nextText: 81
+      },
+      {
+        text: 'USE THE DRAGGER NEXT TO YOU',
+        nextText: 80
+      }
+    ]
+  },
+
+
 
 
   {

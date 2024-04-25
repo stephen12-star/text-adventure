@@ -1,4 +1,0 @@
-//setState: {'' }, use if items needed 
-
-// requiredState: (currentState) => currentState.blueGoo,
-        //setState: { blueGoo: false, sword: true },  TRADE ITEMS
