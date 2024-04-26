@@ -77,10 +77,6 @@ img {
   height: 7in;
   width: 12in;
 }
-
-
-
-
 .game {
   animation: glitch 1.5s linear infinite;
   font-family: "Fira Mono", monospace;
@@ -107,9 +103,6 @@ img {
 }
 
 
-
-
-
 @keyframes glitchTop {
 
   2%,
@@ -126,8 +119,6 @@ img {
     transform: translate(13px, -1px) skew(-13deg);
   }
 }
-
-
 
 @keyframes glitchBotom {
 

@@ -38,7 +38,7 @@ const textNodes = [
       },
     ]
   },
-  
+
   {
     id: 3,
     text: 'Henry leads the group of this journey, they follow the street through a small shopping center.',
@@ -101,13 +101,6 @@ const textNodes = [
       }
     ]
   },
-
-
-
-
-
-
-
 
   {
     id: 20,
@@ -248,11 +241,6 @@ const textNodes = [
     ]
   },
 
-
-
-
-
-
   {
     id: 82,
     text: 'VICTORY!, YALL MEET EACH OTHER AND YALL GOT A CLUE SAYING "<I>THERE IS A BIGGER THREAT AHEAD<I>"',
@@ -270,8 +258,6 @@ const textNodes = [
   },
 
 
-
-
   {
     id: 102,
     text: 'VICTORY! but you find out that a hint says...."<I>THERE IS A BIGGER THREAT AHEAD<I>"',
@@ -287,10 +273,6 @@ const textNodes = [
       }
     ]
   },
-
-
-
-
 
   {
     id: 83,
@@ -325,9 +307,6 @@ const textNodes = [
     ]
   },
 
-
-
-
   {
     id: 86,
     text: 'VICTORY',
@@ -347,13 +326,26 @@ const textNodes = [
 
     options: [
       {
-        text: 'KILL A FRIEND',
+        text: 'KILL PETER',
         nextText: 86
       },
       {
-        text: 'GIVE UP',
-        nextText: 90
+        text: 'KILL HERNY',
+        nextText: 500
       }
+    ]
+  },
+
+  {
+    id: 500,
+    text: 'You died, Because you can not kill henry when you are looking for him',
+    imgsrc: "death.jpg",
+    options: [
+      {
+        text: 'Restart',
+        nextText: -1
+      },
+
     ]
   },
 
@@ -382,11 +374,6 @@ const textNodes = [
     ]
   },
 
-
-
-
-
-
   {
     id: 16,
     text: 'You go inside and tell everyone Henry ran off, so you guys decided to team together and find him or not.',
@@ -402,10 +389,6 @@ const textNodes = [
       }
     ]
   },
-
-
-
-
 
   {
     id: 103,
@@ -427,12 +410,6 @@ const textNodes = [
     ]
   },
 
-
-
-
-
-
-
   {
     id: 8,
     text: 'After the rats dispersed a sword is revealed.',
@@ -449,18 +426,7 @@ const textNodes = [
       }
     ]
   },
-
-
-
-
-
-
-
-
-
-
-
-
+  
   {
     id: 100,
     text: 'Your attempts to run are in vain and the monster easily catches.',
@@ -507,7 +473,7 @@ const textNodes = [
   {
     id: 50,
     text: 'Henry is frustrated now, and starts throwing a tantrum.',
-    imgsrc:"henry.jpg",
+    imgsrc: "henry.jpg",
     options: [
       {
         text: 'Tell Henry to T up',
@@ -518,7 +484,7 @@ const textNodes = [
   {
     id: 51,
     text: 'an old lady walking towards you guys,she asks if they would want to try her drinks henry is the only one who agrees. When he drinks it he begins to act strange',
-    imgsrc:"oldlady.jpg",
+    imgsrc: "oldlady.jpg",
     options: [
       {
         text: 'Ask Henry if he is feeling ok.',
@@ -529,7 +495,7 @@ const textNodes = [
   {
     id: 52,
     text: 'He says his stomach isnt feeling well, we try to look for a hotel to rest at until henry says hes gonna puke. When we turned back to check on him there was no trace of him',
-    imgsrc:"throwup.jpg",
+    imgsrc: "throwup.jpg",
     options: [
       {
         text: 'Tell everyone Henry isnt there anymore.',
@@ -567,10 +533,6 @@ const textNodes = [
     ]
   },
 
-
-
-
-
   {
     id: 800,
     text: 'You encounter an Arachne, in order to defeat it you have to think of the best way.',
@@ -586,10 +548,6 @@ const textNodes = [
       }
     ]
   },
-
-
-
-
 
 
   {
@@ -625,10 +583,7 @@ const textNodes = [
     ]
   },
 
-
-
-
-  {
+ {
     id: 18,
     text: 'You encounter a vampire, in order to defeat it you have to think of the best way.',
     imgsrc: "vammm.jpg",
@@ -661,15 +616,7 @@ const textNodes = [
     ]
   },
 
-
-
-
-
-
-
-
-
-  {
+ {
     id: 90,
     text: 'YOU DIED',
     imgsrc: "death.jpg",
